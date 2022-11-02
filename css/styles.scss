@@ -69,6 +69,13 @@ a {
   margin: 0;
 }
 
+@mixin button($bg-color: #5bc0de) {
+  background-color: $bg-color;
+  padding: 0.5rem 2.5rem;
+  border-radius: $border-radius * 1.5;
+  color: #fff;
+}
+
 // main contnet
 
 #main-content {
@@ -295,6 +302,13 @@ a {
       font-size: 13rem;
       font-weight: bold;
       color: $light-text-color;
+    }
+
+    .hero-slider__card-btn {
+      @include button;
+      font-size: 2.4rem;
+      font-weight: bold;
+      align-self: flex-start;
     }
   }
 }
