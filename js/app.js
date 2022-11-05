@@ -17,20 +17,27 @@ const homeNewsSwiper = new Swiper(".home-news__slider", {
   },
 });
 
-// Change the second argument to your options:
-// https://github.com/sampotts/plyr/#options
-const player = new Plyr("video", {
-  controls: [
-    "play-large",
-    "play",
-    "progress",
-    "current-time",
-    "mute",
-    "volume",
-    "pip",
-    "fullscreen",
-  ],
+// books slider
+
+const bookSlider = new Swiper(".home-books__slider", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "5",
+  loop: true,
+  navigation: {
+    nextEl: ".home-books__slider-next",
+    prevEl: ".home-books__slider-prev",
+  },
+  coverflowEffect: {
+    rotate: 0,
+    stretch: -100,
+    depth: 200,
+    slideShadows: false,
+  },
 });
+
+// players
 
 const players = Array.from(
   document.querySelectorAll(".home-video__player")
