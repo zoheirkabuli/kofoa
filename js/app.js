@@ -17,6 +17,18 @@ const homeNewsSwiper = new Swiper(".home-news__slider", {
   },
 });
 
+// article slider
+
+const homeArticleSwiper = new Swiper(".home-articles__slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".home-articles__slider-next",
+    prevEl: ".home-articles__slider-prev",
+  },
+});
+
 // books slider
 
 const bookSlider = new Swiper(".home-books__slider", {
