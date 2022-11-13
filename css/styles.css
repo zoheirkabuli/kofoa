@@ -879,6 +879,62 @@ a {
   flex: 1 0 0;
 }
 
+.playlist {
+  display: flex;
+  background-image: url(../img/sea.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.playlist__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4.5rem;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px) brightness(0.5);
+}
+
+.playlist-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  border: 2px solid #bcf0ec;
+  padding: 1.5rem;
+}
+.playlist-card .playlist-card__icon {
+  width: 2rem;
+}
+.playlist-card .playlist-card__title {
+  margin: 0;
+  color: white;
+}
+.playlist-card .playlist-card__number {
+  margin: 0;
+  color: white;
+  border: 1px solid #bcf0ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  background-color: #116278;
+}
+
+@media screen and (max-width: 768px) {
+  .playlist__cards {
+    padding: 2rem;
+  }
+  .home-speech__list {
+    order: 3;
+  }
+}
 .player {
   background: rgba(206, 237, 246, 0.3);
   backdrop-filter: blur(7.23px);
