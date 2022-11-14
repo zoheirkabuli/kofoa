@@ -142,6 +142,7 @@ toggle.addEventListener("click", () => {
 });
 
 // home album
+// just mobile
 
 if (window.matchMedia("(max-width: 768px)").matches) {
   const homePosts = new Swiper(".home-posts__slider", {
@@ -167,6 +168,29 @@ if (window.matchMedia("(max-width: 768px)").matches) {
     pagination: {
       el: ".home-album__slider-dots",
     },
+  });
+
+  // search in header
+
+  const searchBtn = document.querySelector(".navbar__search");
+  const navbar = document.querySelector(".navbar");
+  const closeIcon = document.getElementById("close-icon");
+  const searchIcon = document.getElementById("search-icon");
+
+  searchBtn.addEventListener("click", () => {
+    navbar.classList.toggle("search-open");
+    if (navbar.classList.contains("search-open")) {
+      setTimeout(() => {
+        searchIcon.style.display = "none";
+      }, 200);
+
+      closeIcon.style.display = "block";
+    } else {
+      setTimeout(() => {
+        closeIcon.style.display = "none";
+      }, 200);
+      searchIcon.style.display = "block";
+    }
   });
 }
 
