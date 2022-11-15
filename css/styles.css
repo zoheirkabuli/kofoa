@@ -811,7 +811,7 @@ a {
 
 .home-articles__slider {
   width: 100%;
-  padding-block: 1rem;
+  padding: 1rem;
 }
 
 .home-articles__slider-btns {
@@ -927,6 +927,9 @@ a {
   .home-articles {
     width: 90%;
   }
+  .home-articles__slider {
+    padding: 0.5rem;
+  }
   .home-articles__slider-btns {
     display: none;
   }
@@ -987,6 +990,7 @@ a {
   background-repeat: no-repeat;
   border-radius: 3rem;
   overflow: hidden;
+  height: 100%;
 }
 
 .playlist__cards {
@@ -1006,7 +1010,7 @@ a {
   justify-content: space-between;
   border-radius: 2rem;
   border: 2px solid #bcf0ec;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
 }
 .playlist-card .playlist-card__icon {
   width: 2rem;

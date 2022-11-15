@@ -929,7 +929,7 @@ a {
 
 .home-articles__slider {
   width: 100%;
-  padding-block: 1rem;
+  padding: 1rem;
 }
 
 .home-articles__slider-btns {
@@ -1044,6 +1044,10 @@ a {
     width: $mobile-def-width;
   }
 
+  .home-articles__slider {
+    padding: 0.5rem;
+  }
+
   .home-articles__slider-btns {
     display: none;
   }
@@ -1096,14 +1100,13 @@ a {
 
 .playlist {
   display: flex;
-
   background-image: url(../img/sea.webp);
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: $border-radius * 3;
   overflow: hidden;
+  height: 100%;
 }
 
 .playlist__cards {
@@ -1123,7 +1126,7 @@ a {
   justify-content: space-between;
   border-radius: $border-radius * 2;
   border: 2px solid #bcf0ec;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   .playlist-card__icon {
     width: 2rem;
   }
