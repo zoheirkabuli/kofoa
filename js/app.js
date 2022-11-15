@@ -207,6 +207,35 @@ if (window.matchMedia("(max-width: 768px)").matches) {
   });
 }
 
+// desktop search header
+if (window.matchMedia("(min-width: 768px)").matches) {
+  const searchBtn = document.querySelector(".navbar__search-btn");
+  const navbar = document.querySelector(".navbar");
+  const searchForm = document.querySelector(".navbar__search");
+  const searchInput = document.querySelector(".navbar__search-input");
+
+  const closeSearch = (event) => {
+    if (!event.target.closest(".navbar__search-input")) {
+      navbar.classList.remove("search-open");
+      document.removeEventListener("click", closeSearch);
+    }
+  };
+
+  searchBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (navbar.classList.contains("search-open")) {
+      if (searchInput.value.length == 0) {
+        closeSearch(event);
+      } else {
+        searchForm.submit();
+      }
+    } else {
+      navbar.classList.add("search-open");
+      document.addEventListener("click", closeSearch);
+    }
+  });
+}
+
 // player
 
 /*

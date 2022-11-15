@@ -228,13 +228,14 @@ a {
 .navbar {
   @include width;
   background-color: $primary-color;
-  padding: 1.5rem;
+  padding: 1.5rem 4.5rem;
   border-bottom-left-radius: $border-radius * 2;
   border-bottom-right-radius: $border-radius * 2;
   display: flex;
   align-items: center;
   gap: 2rem;
   row-gap: 1rem;
+  position: relative;
 }
 
 .navbar__toggle {
@@ -243,12 +244,12 @@ a {
 
 .navbar__logo-link {
   display: flex;
-  width: 8rem;
+  width: 6rem;
 }
 
 .navbar__logotext-link {
   display: flex;
-  width: 28rem;
+  width: 20rem;
 }
 
 .navbar__menu {
@@ -272,14 +273,33 @@ a {
   }
 }
 
+.navbar__search {
+  position: absolute;
+  left: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: $border-radius * 1.5;
+  display: flex;
+  justify-content: flex-end;
+  width: 4rem;
+  transition: width 0.2s;
+}
+
+.search-open .navbar__search {
+  width: 15%;
+}
+
 .navbar__search-btn {
   display: flex;
-  width: 2rem;
+  width: 4rem;
+  padding: 1rem;
   margin-inline-start: auto;
   cursor: pointer;
-
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: $border-radius * 1.5;
+  margin: -2px;
   svg {
     fill: $fourth-color;
+    width: 1.6rem;
   }
 }
 .navbar__search-input {
@@ -287,6 +307,19 @@ a {
   width: 0;
   transition: width 0.2s;
   color: $light-text-color;
+  background: none;
+  outline: none;
+  border: 0;
+  padding: 0.5rem 1rem;
+}
+.search-open .navbar__search-input {
+  display: block;
+  flex: 1 0 0;
+  width: calc(100% - 4rem);
+}
+
+.navbar__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (max-width: 768px) {
@@ -300,7 +333,6 @@ a {
     padding: 1rem;
     min-height: 7.05rem;
     flex-wrap: wrap;
-    position: relative;
     justify-content: space-between;
     flex-direction: row-reverse;
   }
@@ -330,17 +362,16 @@ a {
   .navbar__search {
     order: 1;
     margin: 0;
-    transition: width 0.2s;
     background-color: #004970;
     border: 1px solid white;
     border-radius: 1rem;
-    display: flex;
-    justify-content: flex-end;
     width: 4.8rem;
+    position: static;
+    left: 1rem;
 
     .navbar__search-btn svg {
       fill: white;
-      width: 2rem;
+      width: 2.6rem;
     }
   }
 
@@ -349,17 +380,10 @@ a {
     width: calc(100% - 2rem);
   }
 
-  .navbar__search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
   .search-open .navbar__search-input {
     display: block;
     flex: 1 0 0;
     width: calc(100% - 4.8rem);
-    background: none;
-    outline: none;
-    border: 0;
-    padding: 0.5rem 1rem;
   }
 
   .navbar__logo-link {
