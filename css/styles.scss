@@ -1899,9 +1899,16 @@ a {
     display: flex;
 
     svg {
+      transition: transform 0.2s;
       width: 3rem;
       height: 3rem;
     }
+  }
+}
+
+.fixed-social__icon:hover {
+  svg {
+    transform: scale(1.2);
   }
 }
 

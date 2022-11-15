@@ -1737,8 +1737,13 @@ a {
   display: flex;
 }
 .fixed-social .fixed-social__icon svg {
+  transition: transform 0.2s;
   width: 3rem;
   height: 3rem;
+}
+
+.fixed-social__icon:hover svg {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 768px) {
