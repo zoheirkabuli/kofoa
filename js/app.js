@@ -67,7 +67,7 @@ const homeArticleSwiper = new Swiper(".home-articles__slider", {
 
 const homeQaSwiper = new Swiper(".home-qa__slider", {
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
   breakpoints: {
     768: {
       slidesPerView: 4,

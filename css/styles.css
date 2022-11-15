@@ -137,6 +137,13 @@ a {
   margin: 0;
   font-size: 1.4rem;
   color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.news-card__meta .news-card__date svg {
+  width: 1.4rem;
+  fill: rgba(0, 0, 0, 0.5);
 }
 .news-card__meta .news-card__btn {
   background-color: none;
@@ -313,8 +320,8 @@ a {
     opacity: 0;
     display: none;
     overflow: hidden;
-    transition: all 0.2s ease;
-    animation: fadeIn 0.3s;
+    transition: all 0.4s ease;
+    animation: fadeIn 0.4s;
   }
   .navbar__menu li {
     width: 100%;
@@ -804,10 +811,6 @@ a {
 
 .home-articles__slider {
   width: 100%;
-}
-
-.home-articles__slider > .swiper-wrapper {
-  box-sizing: border-box;
   padding-block: 1rem;
 }
 
@@ -864,6 +867,27 @@ a {
   gap: 1rem;
 }
 
+.article-card__titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-card__like {
+  width: 3.5rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #fbfbfb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.article-card__like svg {
+  fill: #546179;
+}
+
 .article-card__title {
   margin: 0;
   font-size: 2.4rem;
@@ -872,6 +896,13 @@ a {
 .article-card__date {
   margin: 0;
   color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.article-card__date svg {
+  fill: rgba(0, 0, 0, 0.5);
+  width: 1.4rem;
 }
 
 .article-card__excerpt {
@@ -929,6 +960,23 @@ a {
 }
 .home-speech__wrapper > * {
   flex: 1 0 0;
+}
+.home-speech__wrapper .home-speech__songs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.home-speech__wrapper .home-speech__songs-btn {
+  background-color: #f1fafd;
+  padding: 0.5rem 2.5rem;
+  border-radius: 1.5rem;
+  color: black;
+  transition: all 0.3s ease;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  align-self: center;
+  border: 1px solid #116278;
 }
 
 .playlist {
@@ -1113,6 +1161,10 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+.player .player__download,
+.player .player__save {
+  display: flex;
+}
 .player .player__duration {
   color: #bdbdbd;
   font-size: 1.2rem;
@@ -1208,6 +1260,11 @@ a {
   justify-content: center;
   margin-right: auto;
 }
+.song-card .song-card__content .song-card__save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .song-card.amplitude-playing {
   box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2509803922);
@@ -1230,9 +1287,9 @@ a {
 
 .home-video__section {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 68.8% 1fr;
   grid-template-rows: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .home-video__holder {
@@ -1242,15 +1299,15 @@ a {
 }
 
 .home-video__holder:nth-child(1) {
-  grid-area: 1/1/3/6;
+  grid-area: 1/1/3/2;
 }
 
 .home-video__holder:nth-child(2) {
-  grid-area: 1/6/2/8;
+  grid-area: 1/2/2/3;
 }
 
 .home-video__holder:nth-child(3) {
-  grid-area: 2/6/3/8;
+  grid-area: 2/2/3/3;
 }
 
 .home-video__holder-title {
@@ -1262,6 +1319,19 @@ a {
 
 .plyr {
   border-radius: 1.5rem;
+}
+
+.home-video__btn {
+  background-color: #f1fafd;
+  padding: 0.5rem 2.5rem;
+  border-radius: 1.5rem;
+  color: black;
+  transition: all 0.3s ease;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  align-self: center;
+  border: 1px solid #116278;
 }
 
 @media screen and (max-width: 768px) {
@@ -1293,6 +1363,7 @@ a {
 
 .home-qa__slider {
   width: 100%;
+  padding: 1rem;
 }
 
 .qa-box {
