@@ -426,8 +426,7 @@
 // home article
 
 .home-articles {
-  width: $def-width;
-  max-width: $max-width;
+  @include width;
   align-self: center;
   margin: 2rem 0;
   display: flex;
@@ -1009,8 +1008,7 @@
 // home qa
 
 .home-qa {
-  width: $def-width;
-  max-width: $max-width;
+  @include width;
   align-self: center;
   margin-block: 2rem;
   display: flex;
@@ -1190,8 +1188,7 @@
 // home books
 
 .home-books {
-  width: $def-width;
-  max-width: $max-width;
+  @include width;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -1269,8 +1266,7 @@
 // home contact
 
 .home-contact {
-  width: $def-width;
-  max-width: $max-width;
+  @include width;
   align-self: center;
   margin: 2rem;
   display: flex;
@@ -1368,36 +1364,3 @@
   }
 }
 
-// fixed socail
-
-.fixed-social {
-  position: fixed;
-  left: 3.75%;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0.75rem;
-  border: 2px solid $accent-color;
-  border-radius: $border-radius;
-  gap: 1.5rem;
-  .fixed-social__icon {
-    display: flex;
-
-    svg {
-      transition: transform 0.2s;
-      width: 3rem;
-      height: 3rem;
-    }
-  }
-}
-
-.fixed-social__icon:hover {
-  svg {
-    transform: scale(1.2);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .fixed-social {
-    display: none;
-  }
-}

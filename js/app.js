@@ -237,12 +237,6 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 }
 
 // player
-
-/*
-	When the bandcamp link is pressed, stop all propagation so AmplitudeJS doesn't
-	play the song.
-*/
-
 /*
 	Initializes AmplitudeJS
 */
@@ -357,3 +351,28 @@ if (document.querySelector(".home-speech")) {
     },
   });
 }
+
+const postSimilarSwiper = new Swiper(".similar-posts__slider", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".home-news__slider-next",
+    prevEl: ".home-news__slider-prev",
+  },
+  pagination: {
+    el: ".home-news__slider-dots",
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".home-news__slider-next",
+        prevEl: ".home-news__slider-prev",
+      },
+    },
+  },
+});
