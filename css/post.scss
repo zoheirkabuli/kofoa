@@ -120,8 +120,22 @@
   }
 
   .post__content {
+    .title-round {
+      flex-wrap: wrap;
+    }
     .post__text {
       padding: 0 1.5rem 1.5rem;
+    }
+  }
+
+  .meta-box {
+    position: static;
+    width: 100%;
+    margin-inline-end: 2rem;
+    gap: 1rem;
+
+    .meta-box__date {
+      font-size: 1.2rem;
     }
   }
 }
