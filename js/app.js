@@ -376,3 +376,9 @@ const postSimilarSwiper = new Swiper(".similar-posts__slider", {
     },
   },
 });
+
+// album page light box
+
+Fancybox.bind('[data-fancybox="album"]', {
+  // Your options go here
+});
