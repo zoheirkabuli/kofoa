@@ -568,7 +568,7 @@ a {
   width: 95%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 6rem;
+  row-gap: 11rem;
   column-gap: 3rem;
   margin-top: 8rem;
 }
