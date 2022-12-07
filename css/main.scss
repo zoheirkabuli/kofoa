@@ -1095,6 +1095,11 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: scale 0.25s;
+  }
+
+  &:hover .post-card__img {
+    scale: 1.1;
   }
 
   .post-card__content {
@@ -1877,6 +1882,11 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: scale 0.25s;
+  }
+
+  &:hover .photo-card__img {
+    scale: 1.1;
   }
 
   .photo-card__content {
