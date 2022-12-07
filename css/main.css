@@ -481,6 +481,7 @@ a {
   align-items: center;
   gap: 2rem;
   padding-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .title-bar {
@@ -563,6 +564,76 @@ a {
   }
   .title-bar .title-bar__text {
     font-size: 2rem;
+  }
+}
+.tabs {
+  width: 85%;
+  max-width: 140rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.tabs .tabs__buttons {
+  display: flex;
+  align-items: center;
+}
+.tabs .tabs__buttons .tabs__btn {
+  padding: 1rem 4rem;
+  border: 0.3rem solid #004970;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #004970;
+  background-color: #f1fafd;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.tabs .tabs__buttons .tabs__btn:hover {
+  color: white;
+  background-color: #004970;
+}
+.tabs .tabs__buttons .tabs__btn:not(:first-child) {
+  border-right: 0;
+}
+.tabs .tabs__buttons .tabs__btn:first-child {
+  border-top-right-radius: 2rem;
+}
+.tabs .tabs__buttons .tabs__btn:last-child {
+  border-top-left-radius: 2rem;
+}
+.tabs .tabs__buttons .tabs__btn.active {
+  color: white;
+  background-color: #004970;
+}
+.tabs .tabs__content {
+  background-color: #f1fafd;
+  border-radius: 2rem 0 2rem 2rem;
+  padding: 4rem 2rem;
+}
+.tabs .tabs__content .tabs__page {
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+}
+.tabs .tabs__content .tabs__page.active {
+  display: flex;
+  opacity: 1;
+  animation: tabIn 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .tabs .tabs__buttons .tabs__btn {
+    padding: 0.5rem 2rem;
+  }
+  .tabs .tabs__content {
+    padding: 2rem 1rem;
+  }
+}
+@keyframes tabIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .home-hero {
@@ -663,7 +734,7 @@ a {
 }
 .hero-slider__card .hero-slider__card-content .hero-slider__card-title {
   margin: 0;
-  font-size: 13rem;
+  font-size: 8rem;
   font-weight: bold;
   color: white;
 }
@@ -812,6 +883,9 @@ a {
     border: 0;
     width: auto;
   }
+  .home-news__slider-btns.mobile .home-news__slider-dots:hover {
+    background-color: unset !important;
+  }
   .home-news__slider-btns.mobile > * {
     width: 3rem;
   }
@@ -867,6 +941,9 @@ a {
   aspect-ratio: unset;
   border: 0;
   width: auto;
+}
+.home-posts__slider-btns .home-posts__slider-dots:hover {
+  background-color: unset !important;
 }
 
 .post-card {
@@ -1091,6 +1168,9 @@ a {
     aspect-ratio: unset;
     border: 0;
     width: auto;
+  }
+  .home-articles__slider-btns.mobile .home-articles__slider-dots:hover {
+    background-color: unset !important;
   }
   .home-articles__slider-btns.mobile > * {
     width: 3rem;
@@ -1603,6 +1683,9 @@ a {
   border: 0;
   width: auto;
 }
+.home-album__slider-btns .home-album__slider-dots:hover {
+  background-color: unset !important;
+}
 
 .photo-card {
   border-radius: 3rem;
@@ -1707,6 +1790,7 @@ a {
   transition: opacity 0.2s ease;
   opacity: 0;
   font-weight: 700;
+  text-align: center;
 }
 
 .swiper-slide-active .book-card__title {
@@ -2147,6 +2231,61 @@ a {
 @media screen and (max-width: 768px) {
   .books-wrapper {
     grid-template-columns: 1fr;
+  }
+}
+.videos-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.video-card .video-card__title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #116278;
+}
+.video-card .video-card__link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.video-card .video-card__link .video-card__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.video-card .video-card__link .video-card__content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4392156863);
+}
+.video-card .video-card__link .video-card__content .video-card__icon {
+  display: flex;
+  width: 5rem;
+  aspect-ratio: 1;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.video-card .video-card__link .video-card__content .video-card__icon svg {
+  fill: #419bb5;
+}
+
+@media screen and (max-width: 768px) {
+  .videos-wrapper {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

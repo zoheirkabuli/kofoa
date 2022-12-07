@@ -562,6 +562,7 @@ a {
   align-items: center;
   gap: 2rem;
   padding-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .title-bar {
@@ -651,6 +652,95 @@ a {
     .title-bar__text {
       font-size: 2rem;
     }
+  }
+}
+
+// tabs
+
+.tabs {
+  @include width();
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+
+  .tabs__buttons {
+    display: flex;
+    align-items: center;
+
+    .tabs__btn {
+      padding: 1rem 4rem;
+      border: 0.3rem solid $primary-color;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: $primary-color;
+      background-color: #f1fafd;
+      cursor: pointer;
+      transition: 0.25s;
+
+      &:hover {
+        color: $light-text-color;
+        background-color: $primary-color;
+      }
+
+      &:not(:first-child) {
+        border-right: 0;
+      }
+
+      &:first-child {
+        border-top-right-radius: 2rem;
+      }
+
+      &:last-child {
+        border-top-left-radius: 2rem;
+      }
+
+      &.active {
+        color: $light-text-color;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .tabs__content {
+    background-color: #f1fafd;
+    border-radius: 2rem 0 2rem 2rem;
+    padding: 4rem 2rem;
+
+    .tabs__page {
+      display: none;
+      flex-direction: column;
+      opacity: 0;
+
+      &.active {
+        display: flex;
+        opacity: 1;
+        animation: tabIn 0.5s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs {
+    .tabs__buttons {
+      .tabs__btn {
+        padding: 0.5rem 2rem;
+      }
+    }
+
+    .tabs__content {
+      padding: 2rem 1rem;
+    }
+  }
+}
+
+@keyframes tabIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -763,7 +853,7 @@ a {
 
     .hero-slider__card-title {
       margin: 0;
-      font-size: 13rem;
+      font-size: 8rem;
       font-weight: bold;
       color: $light-text-color;
     }
@@ -925,6 +1015,9 @@ a {
       aspect-ratio: unset;
       border: 0;
       width: auto;
+      &:hover {
+        background-color: unset !important;
+      }
     }
 
     & > * {
@@ -988,6 +1081,9 @@ a {
     aspect-ratio: unset;
     border: 0;
     width: auto;
+    &:hover {
+      background-color: unset !important;
+    }
   }
 }
 
@@ -1221,6 +1317,10 @@ a {
       aspect-ratio: unset;
       border: 0;
       width: auto;
+
+      &:hover {
+        background-color: unset !important;
+      }
     }
 
     & > * {
@@ -1762,6 +1862,10 @@ a {
     aspect-ratio: unset;
     border: 0;
     width: auto;
+
+    &:hover {
+      background-color: unset !important;
+    }
   }
 }
 
@@ -1874,6 +1978,7 @@ a {
   transition: opacity 0.2s ease;
   opacity: 0;
   font-weight: 700;
+  text-align: center;
 }
 
 .swiper-slide-active .book-card__title {
@@ -2377,5 +2482,69 @@ a {
 @media screen and (max-width: 768px) {
   .books-wrapper {
     grid-template-columns: 1fr;
+  }
+}
+
+// video page
+
+.videos-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .video-card__title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #116278;
+  }
+
+  .video-card__link {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    .video-card__img {
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+
+    .video-card__content {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #00000070;
+
+      .video-card__icon {
+        display: flex;
+        width: 5rem;
+        aspect-ratio: 1;
+        padding: 1.5rem;
+        background-color: white;
+        border-radius: 50%;
+
+        & svg {
+          fill: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .videos-wrapper {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
