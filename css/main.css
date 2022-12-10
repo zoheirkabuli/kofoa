@@ -483,7 +483,7 @@ a {
   left: 3.75%;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 0.75rem;
+  padding: 1rem 0.5rem;
   border: 2px solid #419bb5;
   border-radius: 1rem;
   gap: 1.5rem;
@@ -493,8 +493,8 @@ a {
 }
 .fixed-social .fixed-social__icon svg {
   transition: transform 0.2s;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .fixed-social__icon:hover svg {
