@@ -96,6 +96,7 @@ a {
   display: flex;
   align-items: center;
   gap: 2rem;
+  position: relative;
 
   .title-round__text {
     font-size: 2.5rem;
@@ -128,6 +129,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .title-round {
+    flex-wrap: wrap;
     .title-round__text {
       font-size: 2.5rem;
     }
@@ -2252,9 +2254,6 @@ a {
   }
 
   .post__content {
-    .title-round {
-      flex-wrap: wrap;
-    }
     .post__text {
       padding: 0 1.5rem 1.5rem;
     }
@@ -2507,7 +2506,7 @@ a {
 .video-card {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 
   .video-card__title {
     margin: 0;
@@ -2556,5 +2555,44 @@ a {
 @media screen and (max-width: 768px) {
   .videos-wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// single video page
+
+.video-section {
+  display: flex;
+  gap: 2rem;
+
+  .video-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  .video-sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video-section {
+    flex-direction: column;
+
+    .video-content {
+      width: 100%;
+      & .meta-box {
+        margin-inline-end: 0;
+      }
+    }
+
+    .video-sidebar {
+      width: 100%;
+    }
   }
 }

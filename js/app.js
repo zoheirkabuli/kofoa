@@ -298,3 +298,21 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     }
   });
 }
+
+if (document.querySelector(".video-player")) {
+  const players = Array.from(document.querySelectorAll(".video-player")).map(
+    (p) =>
+      new Plyr(p, {
+        controls: [
+          "play-large",
+          "play",
+          "progress",
+          "current-time",
+          "mute",
+          "volume",
+          "pip",
+          "fullscreen",
+        ],
+      })
+  );
+}
