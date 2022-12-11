@@ -2407,6 +2407,46 @@ a {
   display: flex;
   gap: 3rem;
 }
+.audio-page .audio-page__sec:last-child {
+  flex-direction: column;
+}
+.audio-page .audio-page__sec .audio-page__sec-pagination {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  align-self: center;
+}
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-prev,
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-next {
+  display: flex;
+  width: 4rem;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #419bb5;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+}
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-prev svg,
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-next svg {
+  width: 1rem;
+  fill: #419bb5;
+  transition: all 0.25s ease;
+}
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-prev:hover,
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-next:hover {
+  background-color: #419bb5;
+}
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-prev:hover svg,
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-next:hover svg {
+  fill: white;
+}
+.audio-page .audio-page__sec .audio-page__sec-pagination .audio-page__sec-page {
+  margin: 0;
+  font-size: 2rem;
+  color: #419bb5;
+  font-weight: bold;
+}
 .audio-page .audio-page__list {
   flex: 1 0 0;
 }

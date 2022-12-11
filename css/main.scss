@@ -2620,6 +2620,49 @@ a {
     width: 100%;
     display: flex;
     gap: 3rem;
+
+    &:last-child {
+      flex-direction: column;
+    }
+
+    .audio-page__sec-pagination {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      align-self: center;
+
+      .audio-page__sec-prev,
+      .audio-page__sec-next {
+        display: flex;
+        width: 4rem;
+        aspect-ratio: 1;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $accent-color;
+        border-radius: 50%;
+        transition: all 0.25s ease;
+
+        svg {
+          width: 1rem;
+          fill: $accent-color;
+          transition: all 0.25s ease;
+        }
+
+        &:hover {
+          background-color: $accent-color;
+          svg {
+            fill: $light-text-color;
+          }
+        }
+      }
+
+      .audio-page__sec-page {
+        margin: 0;
+        font-size: 2rem;
+        color: $accent-color;
+        font-weight: bold;
+      }
+    }
   }
 
   & .audio-page__list {
