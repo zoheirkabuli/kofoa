@@ -658,6 +658,9 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .tabs {
+    width: 90%;
+  }
   .tabs .tabs__buttons .tabs__btn {
     padding: 0.5rem 2rem;
   }
