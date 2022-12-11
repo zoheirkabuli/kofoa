@@ -2388,4 +2388,60 @@ a {
   .video-section .video-sidebar {
     width: 100%;
   }
+}
+.audio-page {
+  width: 85%;
+  max-width: 120rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 5rem 2rem;
+  gap: 2rem;
+}
+.audio-page .title-round {
+  width: 100%;
+}
+.audio-page .audio-page__sec {
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+}
+.audio-page .audio-page__list {
+  flex: 1 0 0;
+}
+.audio-page .audio-page__player {
+  flex: 2 0 0;
+}
+.audio-page .audio-page__player .player__img {
+  width: 15%;
+}
+.audio-page .audio-page__player #player__progress, .audio-page .audio-page__player .player__btns {
+  width: 50%;
+}
+.audio-page .audio-page__songs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.audio-page .audio-page__songs .song-card {
+  border: 1px solid #419bb5;
+}
+
+@media screen and (max-width: 768px) {
+  .audio-page {
+    width: 90%;
+  }
+  .audio-page .title-bar {
+    width: 90%;
+  }
+  .audio-page .audio-page__sec {
+    flex-direction: column-reverse;
+  }
+  .audio-page .audio-page__player #player__progress, .audio-page .audio-page__player .player__btns {
+    width: 90%;
+  }
+  .audio-page .audio-page__songs {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */

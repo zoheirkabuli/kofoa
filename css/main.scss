@@ -2600,3 +2600,75 @@ a {
     }
   }
 }
+
+// audio page
+
+.audio-page {
+  @include width();
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 5rem 2rem;
+  gap: 2rem;
+
+  & .title-round {
+    width: 100%;
+  }
+
+  .audio-page__sec {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+  }
+
+  & .audio-page__list {
+    flex: 1 0 0;
+  }
+  & .audio-page__player {
+    flex: 2 0 0;
+
+    & .player__img {
+      width: 15%;
+    }
+
+    & #player__progress,
+    & .player__btns {
+      width: 50%;
+    }
+  }
+
+  & .audio-page__songs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    & .song-card {
+      border: 1px solid $accent-color;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .audio-page {
+    width: $mobile-def-width;
+
+    & .title-bar {
+      width: 90%;
+    }
+
+    .audio-page__sec {
+      flex-direction: column-reverse;
+    }
+
+    & .audio-page__player {
+      & #player__progress,
+      & .player__btns {
+        width: 90%;
+      }
+    }
+
+    & .audio-page__songs {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
