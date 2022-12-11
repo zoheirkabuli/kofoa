@@ -2283,14 +2283,20 @@ a {
 }
 .book .book__contet .book__holder .book__title {
   color: #ceedf6;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  text-align: center;
 }
 .book .book__contet .book__holder .book__date,
 .book .book__contet .book__holder .book__author {
   margin: 0;
-  color: white;
   font-size: 1.4rem;
+}
+.book .book__contet .book__holder .book__author {
+  color: white;
+}
+.book .book__contet .book__holder .book__date {
+  color: #dadbdd;
 }
 .book:hover .book__img-link {
   margin-top: -10rem;

@@ -2468,15 +2468,24 @@ a {
 
       .book__title {
         color: $fifth-color;
-        font-size: 2.4rem;
+        font-size: 1.6rem;
         font-weight: bold;
+        text-align: center;
       }
 
       .book__date,
       .book__author {
         margin: 0;
-        color: $light-text-color;
+
         font-size: 1.4rem;
+      }
+
+      .book__author {
+        color: $light-text-color;
+      }
+
+      .book__date {
+        color: #dadbdd;
       }
     }
   }
