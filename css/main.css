@@ -221,7 +221,52 @@ a {
 }
 .navbar__menu li a:hover {
   color: #5bc0de;
-  font-size: 1.8rem;
+}
+.navbar__menu .is-drop {
+  position: relative;
+}
+.navbar__menu .is-drop .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  border-radius: 1rem;
+  z-index: 10;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 0.25s, max-height 0.25s;
+}
+.navbar__menu .is-drop .dropdown-menu li a {
+  padding: 1rem 2rem;
+  color: #116278;
+}
+.navbar__menu .is-drop .dropdown-menu li a:hover {
+  color: white;
+  background-color: #116278;
+}
+.navbar__menu .is-drop a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar__menu .is-drop a svg {
+  width: 1rem;
+  fill: white;
+  transition: all 0.2s ease;
+}
+.navbar__menu .is-drop:hover .dropdown-menu {
+  max-height: 100vh;
+  opacity: 1;
+}
+.navbar__menu .is-drop:hover a {
+  color: #5bc0de;
+}
+.navbar__menu .is-drop:hover a svg {
+  fill: #5bc0de;
+  rotate: 180deg;
 }
 
 .navbar__search {

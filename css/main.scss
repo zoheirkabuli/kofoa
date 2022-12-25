@@ -270,7 +270,64 @@ a {
 
       &:hover {
         color: $fourth-color;
-        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .is-drop {
+    position: relative;
+
+    .dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      border-radius: $border-radius;
+      z-index: 10;
+      box-shadow: 0 3px 5px 0 #0003;
+      background-color: $light-text-color;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: opacity 0.25s, max-height 0.25s;
+
+      li {
+        a {
+          padding: 1rem 2rem;
+          color: $secondary-color;
+
+          &:hover {
+            color: $light-text-color;
+            background-color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      svg {
+        width: 1rem;
+        fill: $light-text-color;
+        transition: all 0.2s ease;
+      }
+    }
+
+    &:hover {
+      .dropdown-menu {
+        max-height: 100vh;
+        opacity: 1;
+      }
+
+      a {
+        color: $fourth-color;
+        svg {
+          fill: $fourth-color;
+          rotate: 180deg;
+        }
       }
     }
   }
