@@ -563,11 +563,12 @@ a {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .content-box--title {
   padding: 0 0 2rem 0;
+  margin-top: 6rem;
 }
 
 .title-bar {
@@ -753,9 +754,11 @@ a {
   align-items: center;
   align-self: center;
   gap: 3rem;
+  width: 100%;
 }
 
 .search-box {
+  flex: 1 0 0;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -802,7 +805,6 @@ a {
 @media screen and (max-width: 768px) {
   .search-boxes {
     flex-direction: column;
-    width: 100%;
   }
   .search-box {
     width: 100%;
