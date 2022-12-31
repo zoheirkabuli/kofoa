@@ -257,7 +257,7 @@ a {
 
 .navbar__menu {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
   margin-inline: 5rem auto;
 
@@ -342,10 +342,11 @@ a {
   justify-content: flex-end;
   width: 4rem;
   transition: width 0.2s;
+  background-color: $primary-color;
 }
 
 .search-open .navbar__search {
-  width: 20%;
+  width: 70%;
 }
 
 .navbar__search-btn {
@@ -620,8 +621,12 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
   margin-top: 6rem;
+}
+
+.content-box--title {
+  padding: 0 0 2rem 0;
 }
 
 .title-bar {
@@ -803,6 +808,92 @@ a {
     opacity: 1;
   }
 }
+
+// * breadcrumb
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: $primary-color;
+  color: $light-text-color;
+  border-radius: $border-radius;
+  gap: 0.5rem;
+  align-self: flex-start;
+
+  a {
+    color: inherit;
+  }
+}
+
+// * search boxes and box
+
+.search-boxes {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 3rem;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius;
+  border: 0.2rem solid;
+
+  .search-box__header {
+    padding: 2rem 4rem;
+
+    .search-box__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      gap: 1rem;
+      color: $secondary-color;
+      font-size: 2rem;
+      font-weight: bold;
+
+      svg {
+        width: 2rem;
+      }
+    }
+  }
+  .search-box__content {
+    padding: 2rem 4rem;
+    background-color: $light-text-color;
+    border-bottom-right-radius: calc($border-radius - 0.2rem);
+    border-bottom-left-radius: calc($border-radius - 0.2rem);
+
+    .search-box__result {
+      margin: 0;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.search-box:nth-child(odd) {
+  background-color: #dff0d8;
+  border-color: #dff0d8;
+}
+.search-box:nth-child(even) {
+  background-color: #d9edf7;
+  border-color: #d9edf7;
+}
+
+@media screen and (max-width: 768px) {
+  .search-boxes {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+// ! pages
 
 // home page
 
@@ -1235,7 +1326,7 @@ a {
   }
 
   .post-card {
-    aspect-ratio: 6/8;
+    aspect-ratio: 6/8 !important;
   }
 }
 
@@ -1355,6 +1446,7 @@ a {
   margin: 0;
   color: $text-color;
   font-size: 1.4rem;
+  text-align: justify;
 }
 
 .article-card__btn {
@@ -2782,3 +2874,5 @@ a {
     }
   }
 }
+
+// search page

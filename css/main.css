@@ -209,7 +209,7 @@ a {
 
 .navbar__menu {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
   margin-inline: 5rem auto;
 }
@@ -278,10 +278,11 @@ a {
   justify-content: flex-end;
   width: 4rem;
   transition: width 0.2s;
+  background-color: #004970;
 }
 
 .search-open .navbar__search {
-  width: 20%;
+  width: 70%;
 }
 
 .navbar__search-btn {
@@ -561,8 +562,12 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
   margin-top: 6rem;
+}
+
+.content-box--title {
+  padding: 0 0 2rem 0;
 }
 
 .title-bar {
@@ -727,6 +732,80 @@ a {
   }
   100% {
     opacity: 1;
+  }
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #004970;
+  color: white;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  align-self: flex-start;
+}
+.breadcrumb a {
+  color: inherit;
+}
+
+.search-boxes {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 3rem;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 0.2rem solid;
+}
+.search-box .search-box__header {
+  padding: 2rem 4rem;
+}
+.search-box .search-box__header .search-box__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  gap: 1rem;
+  color: #116278;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.search-box .search-box__header .search-box__title svg {
+  width: 2rem;
+}
+.search-box .search-box__content {
+  padding: 2rem 4rem;
+  background-color: white;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+.search-box .search-box__content .search-box__result {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.search-box:nth-child(odd) {
+  background-color: #dff0d8;
+  border-color: #dff0d8;
+}
+
+.search-box:nth-child(even) {
+  background-color: #d9edf7;
+  border-color: #d9edf7;
+}
+
+@media screen and (max-width: 768px) {
+  .search-boxes {
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-box {
+    width: 100%;
   }
 }
 .home-hero {
@@ -1122,7 +1201,7 @@ a {
     display: flex;
   }
   .post-card {
-    aspect-ratio: 6/8;
+    aspect-ratio: 6/8 !important;
   }
 }
 .home-articles {
@@ -1236,6 +1315,7 @@ a {
   margin: 0;
   color: #2d3134;
   font-size: 1.4rem;
+  text-align: justify;
 }
 
 .article-card__btn {
