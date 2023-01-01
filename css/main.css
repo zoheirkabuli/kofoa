@@ -811,6 +811,56 @@ a {
     width: 100%;
   }
 }
+.faq {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9edf7;
+  border: 0.2rem solid #d9edf7;
+  border-radius: 1rem;
+}
+.faq .faq__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.faq .faq__header .faq__title,
+.faq .faq__header .faq__view {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  color: #116278;
+}
+.faq .faq__header .faq__title svg,
+.faq .faq__header .faq__view svg {
+  width: 1.5rem;
+  fill: #116278;
+}
+.faq .faq__content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq .faq__content .faq__text {
+  margin: 0;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+}
+.faq .faq__content .faq__text:first-child {
+  color: #004970;
+}
+.faq.open .faq__content {
+  max-height: 100vh;
+}
+
 .home-hero {
   width: 85%;
   max-width: 120rem;
@@ -2620,5 +2670,17 @@ a {
   }
   .audio-page .audio-page__songs {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+.faq-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-wrapper {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

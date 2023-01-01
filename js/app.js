@@ -316,3 +316,15 @@ if (document.querySelector(".video-player")) {
       })
   );
 }
+
+// * faq
+
+if (document.querySelector(".faq")) {
+  const allFaq = document.getElementsByClassName("faq");
+
+  for (const faq of allFaq) {
+    faq.firstElementChild.addEventListener("click", () => {
+      faq.classList.toggle("open");
+    });
+  }
+}
